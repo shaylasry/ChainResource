@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shayl\\Documents\\work\\ChainResource\\ChainResource.csproj": {}
+    "C:\\Users\\shayl\\Documents\\ChainResource\\ChainResource.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shayl\\Documents\\work\\ChainResource\\ChainResource.csproj": {
+    "C:\\Users\\shayl\\Documents\\ChainResource\\ChainResource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shayl\\Documents\\work\\ChainResource\\ChainResource.csproj",
+        "projectUniqueName": "C:\\Users\\shayl\\Documents\\ChainResource\\ChainResource.csproj",
         "projectName": "ChainResource",
-        "projectPath": "C:\\Users\\shayl\\Documents\\work\\ChainResource\\ChainResource.csproj",
+        "projectPath": "C:\\Users\\shayl\\Documents\\ChainResource\\ChainResource.csproj",
         "packagesPath": "C:\\Users\\shayl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shayl\\Documents\\work\\ChainResource\\obj\\",
+        "outputPath": "C:\\Users\\shayl\\Documents\\ChainResource\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shayl\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

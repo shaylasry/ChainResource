@@ -2,10 +2,9 @@ namespace ChainResource.Interfaces
 {
     public interface IStorage<T>
     {
-        Task<T?> GetValue();
-        void Save(T value);
+        Task<T?> TryGet();
+        Task Save(T value);
         bool CanWrite { get; }
-        DateTime? LastUpdated { get; }
-        TimeSpan Expiration { get; }
+        Task<bool> IsExpired();
     }
 }
