@@ -1,0 +1,15 @@
+C:\Users\shayl\Documents\work\ChainResource\bin\Debug\net8.0\ChainResource.exe
+C:\Users\shayl\Documents\work\ChainResource\bin\Debug\net8.0\ChainResource.deps.json
+C:\Users\shayl\Documents\work\ChainResource\bin\Debug\net8.0\ChainResource.runtimeconfig.json
+C:\Users\shayl\Documents\work\ChainResource\bin\Debug\net8.0\ChainResource.dll
+C:\Users\shayl\Documents\work\ChainResource\bin\Debug\net8.0\ChainResource.pdb
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.AssemblyInfoInputs.cache
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.AssemblyInfo.cs
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.csproj.CoreCompileInputs.cache
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.sourcelink.json
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.dll
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\refint\ChainResource.dll
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.pdb
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ChainResource.genruntimeconfig.cache
+C:\Users\shayl\Documents\work\ChainResource\obj\Debug\net8.0\ref\ChainResource.dll
