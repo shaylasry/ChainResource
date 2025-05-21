@@ -21,11 +21,13 @@ namespace ChainResource.Storages
             try
             {
                 if (!File.Exists(_filePath))
+                {
                     return default;
+                }
 
                 var json = await File.ReadAllTextAsync(_filePath);
-                var data = JsonSerializer.Deserialize<(T Value, DateTime SavedAt)>(json);
-                return data.Value;
+                var data = JsonSerializer.Deserialize<T>(json);
+                return data;
             }
             catch
             {
@@ -35,8 +37,7 @@ namespace ChainResource.Storages
 
         public async Task Save(T value)
         {
-            var data = (Value: value, SavedAt: DateTime.UtcNow);
-            var json = JsonSerializer.Serialize(data);
+            var json = JsonSerializer.Serialize(value);
             await File.WriteAllTextAsync(_filePath, json);
         }
 
@@ -45,10 +46,14 @@ namespace ChainResource.Storages
             try
             {
                 if (!File.Exists(_filePath))
+                {
                     return Task.FromResult(true);
+                }
 
                 var lastWriteTime = File.GetLastWriteTimeUtc(_filePath);
-                return Task.FromResult(DateTime.UtcNow - lastWriteTime > _expirationTime);
+                var expired = DateTime.UtcNow - lastWriteTime > _expirationTime;
+
+                return Task.FromResult(expired);
             }
             catch
             {

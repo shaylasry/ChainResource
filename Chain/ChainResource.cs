@@ -2,7 +2,7 @@ using ChainResource.Interfaces;
 
 namespace ChainResource.Chain
 {
-    public class ChainResource<T>
+    public class ChainResource<T> : IResourceChain<T>
     {
         private readonly IStorage<T>[] _storages;
 
@@ -21,7 +21,10 @@ namespace ChainResource.Chain
             for (int i = 0; i < _storages.Length; i++)
             {
                 var storage = _storages[i];
-                if (!await storage.IsExpired())
+
+                var isExpired = await storage.IsExpired();
+
+                if (!isExpired)
                 {
                     value = await storage.TryGet();
                     if (value != null)
@@ -45,10 +48,9 @@ namespace ChainResource.Chain
             for (int i = startIndex; i >= 0; i--)
             {
                 var storage = _storages[i];
-                if (storage.CanWrite)
-                {
-                    await storage.Save(value);
-                }
+                if (!storage.CanWrite) continue;
+                
+                await storage.Save(value);
             }
         }
     }
