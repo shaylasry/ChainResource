@@ -32,15 +32,6 @@ namespace ChainResource.Chain
                 }
             }
 
-            if (lastValidStorageIndex == -1)
-            {
-                value = await _storages[^1].TryGet();
-                if (value != null)
-                {
-                    lastValidStorageIndex = _storages.Length - 1;
-                }
-            }
-
             if (value != null && lastValidStorageIndex > 0)
             {
                 await PropagateValueUp(value, lastValidStorageIndex - 1);
